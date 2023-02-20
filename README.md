@@ -26,7 +26,7 @@ pencilCool, yhtangcoder@gmail.com
 
 ## Test
 
-用 python 执行 udp_boradcast.py 脚本可以用来在 localhost 内发送广播，默认端口号是 5555
+用 python 执行 udp_broadcast.py 脚本可以用来在 localhost 内发送广播，默认端口号是 5555
 
 ## License
 

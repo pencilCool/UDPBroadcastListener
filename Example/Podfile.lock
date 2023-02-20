@@ -1,0 +1,33 @@
+PODS:
+  - CocoaAsyncSocket (7.6.5)
+  - TYHTestUtils (0.1.0)
+  - UDPBroadcastListener (0.1.0):
+    - CocoaAsyncSocket
+
+DEPENDENCIES:
+  - TYHTestUtils (from `https://github.com/pencilCool/TYHTestUtils.git`)
+  - UDPBroadcastListener (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - CocoaAsyncSocket
+
+EXTERNAL SOURCES:
+  TYHTestUtils:
+    :git: https://github.com/pencilCool/TYHTestUtils.git
+  UDPBroadcastListener:
+    :path: "../"
+
+CHECKOUT OPTIONS:
+  TYHTestUtils:
+    :commit: 1875371802ace0d308c6c255306d5f09df591c44
+    :git: https://github.com/pencilCool/TYHTestUtils.git
+
+SPEC CHECKSUMS:
+  CocoaAsyncSocket: 065fd1e645c7abab64f7a6a2007a48038fdc6a99
+  TYHTestUtils: 91d7f5dbe500de12f8a5751fa998e6827ac0f480
+  UDPBroadcastListener: 51ed8249b1565c532e7c3840adcae36de59e7102
+
+PODFILE CHECKSUM: 7299780cc3c24c17e78645b07127e26dd26a89a1
+
+COCOAPODS: 1.11.2

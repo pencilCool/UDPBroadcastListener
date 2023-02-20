@@ -39,8 +39,8 @@
 /* Begin PBXFileReference section */
 		0F78F833D8FCC6902007D8BA /* Pods-UDPBroadcastListener_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UDPBroadcastListener_Tests.debug.xcconfig"; path = "Target Support Files/Pods-UDPBroadcastListener_Tests/Pods-UDPBroadcastListener_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		1F24324433E90D6D72DFB142 /* Pods-UDPBroadcastListener_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UDPBroadcastListener_Tests.release.xcconfig"; path = "Target Support Files/Pods-UDPBroadcastListener_Tests/Pods-UDPBroadcastListener_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		3FD29B67C7A0645CD9F7424E /* UDPBroadcastListener.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = UDPBroadcastListener.podspec; path = ../UDPBroadcastListener.podspec; sourceTree = "<group>"; };
-		5559187CD348B11184B9612A /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		3FD29B67C7A0645CD9F7424E /* UDPBroadcastListener.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = UDPBroadcastListener.podspec; path = ../UDPBroadcastListener.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		5559187CD348B11184B9612A /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* UDPBroadcastListener_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UDPBroadcastListener_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -66,7 +66,7 @@
 		A4B5E94C073250C03FE436FF /* Pods-UDPBroadcastListener_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UDPBroadcastListener_Example.debug.xcconfig"; path = "Target Support Files/Pods-UDPBroadcastListener_Example/Pods-UDPBroadcastListener_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		AADB084182C93500EFBD6B1B /* Pods_UDPBroadcastListener_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UDPBroadcastListener_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D140E4B28F79905E033546F3 /* Pods_UDPBroadcastListener_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UDPBroadcastListener_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DBAFBB32252EB05C664CD6D0 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		DBAFBB32252EB05C664CD6D0 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,7 +193,6 @@
 				0F78F833D8FCC6902007D8BA /* Pods-UDPBroadcastListener_Tests.debug.xcconfig */,
 				1F24324433E90D6D72DFB142 /* Pods-UDPBroadcastListener_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -258,6 +257,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -346,10 +346,14 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-UDPBroadcastListener_Example/Pods-UDPBroadcastListener_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CocoaAsyncSocket/CocoaAsyncSocket.framework",
+				"${BUILT_PRODUCTS_DIR}/TYHTestUtils/TYHTestUtils.framework",
 				"${BUILT_PRODUCTS_DIR}/UDPBroadcastListener/UDPBroadcastListener.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaAsyncSocket.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TYHTestUtils.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UDPBroadcastListener.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;

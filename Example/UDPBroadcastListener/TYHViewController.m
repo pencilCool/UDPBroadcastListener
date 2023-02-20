@@ -7,6 +7,35 @@
 //
 
 #import "TYHViewController.h"
+@import UDPBroadcastListener;
+@import CocoaAsyncSocket;
+@interface ADelegate:NSObject<GCDAsyncUdpSocketDelegate>
+@end
+
+@implementation  ADelegate
+
+- (void)udpSocket:(GCDAsyncUdpSocket *)sock
+   didReceiveData:(NSData *)data
+      fromAddress:(NSData *)address
+withFilterContext:(id)filterContext {
+    NSLog(@"Adelegate");
+}
+@end
+
+
+@interface BDelegate:NSObject<GCDAsyncUdpSocketDelegate>
+@end
+
+@implementation  BDelegate
+
+- (void)udpSocket:(GCDAsyncUdpSocket *)sock
+   didReceiveData:(NSData *)data
+      fromAddress:(NSData *)address
+withFilterContext:(id)filterContext {
+    NSLog(@"Bdelegate");
+}
+@end
+
 
 @interface TYHViewController ()
 
@@ -17,7 +46,33 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    
+    [UDPBroadcastListener shared];
+    
+    [self addCell:@"add A delegate" action:^{
+        [[UDPBroadcastListener shared] addDelegate:[ADelegate new]];
+        NSLog(@"add A delegate");
+    }];
+    
+    [self addCell:@"add B delegate" action:^{
+        [[UDPBroadcastListener shared] addDelegate:[BDelegate new]];
+        NSLog(@"add B delegate");
+    }];
+    
+    [self addCell:@"Start" action:^{
+        [[UDPBroadcastListener shared] start];
+        NSLog(@"start");
+    }];
+    
+    [self addCell:@"pause" action:^{
+        [[UDPBroadcastListener shared] pause];
+        NSLog(@"pause");
+    }];
+    
+    [self addCell:@"Stop" action:^{
+        [[UDPBroadcastListener shared] stop];
+        NSLog(@"Stop");
+    }];
 }
 
 - (void)didReceiveMemoryWarning

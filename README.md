@@ -24,6 +24,10 @@ pod 'UDPBroadcastListener'
 
 pencilCool, yhtangcoder@gmail.com
 
+## Test
+
+用 python 执行 udp_boradcast.py 脚本可以用来在 localhost 内发送广播，默认端口号是 55555
+
 ## License
 
 UDPBroadcastListener is available under the MIT license. See the LICENSE file for more info.

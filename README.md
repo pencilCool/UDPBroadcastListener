@@ -8,7 +8,40 @@
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
+[API usage](https://github.com/pencilCool/UDPBroadcastListener/blob/main/Example/UDPBroadcastListener/TYHViewController.m)
+```
+@interface ADelegate:NSObject<GCDAsyncUdpSocketDelegate>
+@end
 
+@implementation  ADelegate
+
+- (void)udpSocket:(GCDAsyncUdpSocket *)sock
+   didReceiveData:(NSData *)data
+      fromAddress:(NSData *)address
+withFilterContext:(id)filterContext {
+    NSLog(@"Adelegate");
+}
+@end
+
+
+@interface BDelegate:NSObject<GCDAsyncUdpSocketDelegate>
+@end
+
+@implementation  BDelegate
+
+- (void)udpSocket:(GCDAsyncUdpSocket *)sock
+   didReceiveData:(NSData *)data
+      fromAddress:(NSData *)address
+withFilterContext:(id)filterContext {
+    NSLog(@"Bdelegate");
+}
+@end
+
+
+
+ [[UDPBroadcastListener shared] addDelegate:[ADelegate new]];
+ [[UDPBroadcastListener shared] addDelegate:[BDelegate new]];
+```
 ## Requirements
 
 ## Installation
